@@ -1,0 +1,21 @@
+{
+  "name": "shopify-school-homepage-denys-shmatkov",
+  "version": "1.0.0",
+  "description": "тестове завдання",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-posthtml": "^2.15.4",
+    "@parcel/transformer-sass": "^2.15.4",
+    "parcel": "^2.15.4",
+    "posthtml": "^0.16.6",
+    "posthtml-include": "^2.0.1"
+  },
+  "dependencies": {
+    "swiper": "^11.2.10"
+  }
+}

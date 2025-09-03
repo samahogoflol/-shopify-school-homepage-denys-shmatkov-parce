@@ -1,0 +1,92 @@
+@media (max-width: 1267px) {
+  .podval {
+    width: 100%;
+    &__navigation {
+      padding-left: 19vw;
+      display: grid;
+      grid-template-columns: repeat(2, 40vw);
+      gap: 3vw;
+    }
+    &__privacy {
+      padding-left: 14vw;
+      width: 100vw;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .podval {
+    &__list {
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    &__arrow {
+      display: block;
+      padding: 0 2vw;
+    }
+
+    &__list.is-active {
+      justify-content: left;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__navigation {
+      display: block;
+      margin-bottom: 48px;
+      margin-top: 60px;
+      padding: 0 16px;
+    }
+
+    &__resources,
+    &__help,
+    &__company,
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      width: 90vw;
+      justify-content: left;
+      border-top: 1px solid #ebebeb;
+    }
+
+    &__menu {
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    &__resources a,
+    &__help a,
+    &__company a,
+    &__menu a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    &__resources img,
+    &__help img,
+    &__company img,
+    &__menu img {
+      position: absolute;
+      left: 320px;
+      top: 20px;
+    }
+
+    &__title {
+      padding: 16px 0;
+      margin: 0;
+    }
+
+    &__privacy {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 0 16px;
+    }
+  }
+}

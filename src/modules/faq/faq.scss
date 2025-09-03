@@ -1,0 +1,92 @@
+.faq {
+  height: 692px;
+  max-width: 100%;
+  text-align: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 80px 0 80px 0;
+
+  &__header {
+    margin-bottom: 48px;
+    h2 {
+      margin-bottom: 16px;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 36px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      color: #737373;
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+    width: 872px;
+  }
+
+  &__item {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ebebeb;
+    padding: 24px;
+    max-height: 72px;
+  }
+
+  &__question {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 10px;
+    height: 2px;
+    background-color: black;
+  }
+
+  &__icon::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+
+  &__icon::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(90deg);
+  }
+
+  &__answer {
+    color: #737373;
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.is-active {
+  max-height: max-content;
+}
+
+.faq__item.is-active .faq__icon::after {
+  transform: rotate(0deg);
+}
+.faq__item.is-active .faq__answer {
+  max-height: max-content;
+  opacity: 1;
+}

@@ -1,0 +1,31 @@
+.podval {
+  &__navigation {
+    display: grid;
+    grid-template-columns: repeat(4, 312px);
+    padding: 60px 60px 48px 60px;
+    gap: 24px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 12px;
+    color: #737373;
+  }
+
+  &__privacy {
+    display: flex;
+    gap: 32px;
+    padding-left: 60px;
+    margin-bottom: 24px;
+    color: #737373;
+  }
+  &__arrow {
+    display: none;
+  }
+}

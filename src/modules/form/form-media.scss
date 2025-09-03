@@ -1,0 +1,65 @@
+@media (max-width: 1279px) {
+  .need-help {
+    width: 100vw;
+
+    &__row {
+      width: 100vw;
+      grid-template-columns: auto;
+    }
+
+    &__email,
+    &__message {
+      input,
+      textarea {
+        display: block;
+        grid-template-columns: auto;
+        width: 424px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .need-help {
+    width: 100vw;
+    display: block;
+    padding: 60 0;
+
+    &__row {
+      display: block;
+      width: 100%;
+    }
+
+    &__title,
+    &__submit {
+      text-align: left;
+      margin-left: 30vw;
+    }
+
+    &__submit {
+      justify-content: left;
+      margin-left: 35vw;
+    }
+
+    &__name,
+    &__number,
+    &__email,
+    &__message {
+      display: block;
+      width: 100vw;
+      margin-bottom: 24px;
+      padding-right: 16px;
+      padding-left: 16px;
+
+      label {
+        margin-left: 1vw;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding-left: 2vw;
+      }
+    }
+  }
+}

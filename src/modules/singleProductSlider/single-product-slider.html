@@ -1,0 +1,70 @@
+<section class="selected-product" aria-labelledby="product-title" aria-describedby="product-conclusion">
+  <div class="selected-product__media">
+    <div class="swiper selected-product__thumbs-swiper" role="region" aria-label="Product list">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" role="group" aria-roledescription="slide">
+          <img src="/src/assets/imgs/products/blackVersion/main.svg" alt="Pink version photo 1" />
+        </div>
+        <div class="swiper-slide" role="group" aria-roledescription="slide">
+          <img src="/src/assets/imgs/products/pinkVersion/second.svg" alt="Pink version photo 2" />
+        </div>
+        <div class="swiper-slide" role="group" aria-roledescription="slide">
+          <img src="/src/assets/imgs/products/pinkVersion/third.svg" alt="Pink version photo 3" />
+        </div>
+        <div class="swiper-slide" role="group" aria-roledescription="slide">
+          <img src="/src/assets/imgs/products/pinkVersion/fourth.svg" alt="Pink version photo 4" />
+        </div>
+        <div class="swiper-slide" role="group" aria-roledescription="slide">
+          <img src="/src/assets/imgs/products/pinkVersion/five.svg" alt="Pink version photo 5" />
+        </div>
+      </div>
+    </div>
+    <div class="swiper selected-product__main" role="region" aria-label="Main product slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" role="group" aria-roledescription="slide">
+          <img src="./assets/imgs/products/whiteVersion/mainFoto.svg" alt="Chosen product Nike Air Max Plus" />
+        </div>
+      </div>
+      <div class="selected-product__rated">
+        <div class="selected-product__container">
+          <img src="/src/assets/imgs/starHighlyRated.png" alt="Highly Rated" />
+          <p>Highly Rated</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="selected-product__details">
+    <h2 class="selected-product__title" id="product-title">Nike Air Max Plus</h2>
+    <p class="selected-product__price" id="product-price">$280.00</p>
+    <div class="swiper selected-product__choice-color-swiper" role="region" aria-label="Choise color slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" data-variant="white" role="radio" aria-checked="true">
+          <img src="/src/assets/imgs/products/whiteVersion/mainFoto.svg" alt="White version" />
+        </div>
+        <div class="swiper-slide" data-variant="black" role="radio" aria-checked="false">
+          <img src="/src/assets/imgs/products/blackVersion/main.svg" alt="Black version" />
+        </div>
+        <div class="swiper-slide" data-variant="pink" role="radio" aria-checked="false">
+          <img src="/src/assets/imgs/products/pinkVersion/mainFoto.svg" alt="Pink version" />
+        </div>
+      </div>
+    </div>
+    <div class="selected-product__price-block">
+      <p class="selected-product__select-size">Select Size:</p>
+      <div class="selected-product__sizes">
+        <button data-size="size" type="button" aria-pressed="false">UK 5.5</button>
+        <button class="is-selected" type="button" data-size="size" aria-pressed="true">UK 6 (EU 39)</button>
+        <button data-size="size" type="button" aria-pressed="false">UK 6 (EU 40)</button>
+        <button data-size="size" type="button" aria-pressed="false">UK 6.5</button>
+        <button data-size="size" type="button" aria-pressed="false">UK 7</button>
+        <button data-size="size" type="button" aria-pressed="false">UK 7.5</button>
+      </div>
+    </div>
+
+    <button class="selected-product__add-to-basket" aria-describedby="product-price">Add To Bag</button>
+    <p class="selected-product__conclusion" id="product-conclusion">
+      Let your attitude have the edge in your Nike Air Max Plus, a Tuned Air experience that offers premium stability and unbelievable
+      cushioning.
+    </p>
+  </div>
+</section>

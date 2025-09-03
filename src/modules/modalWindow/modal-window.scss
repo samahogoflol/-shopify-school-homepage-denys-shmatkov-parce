@@ -1,0 +1,85 @@
+.body--lock {
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: contain;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  display: block;
+
+  &__content {
+    max-width: 871px;
+    display: grid;
+    grid-template-columns: 519px 352px;
+    margin: 0 auto;
+    margin-top: 244px;
+  }
+  &__action {
+    padding: 60px;
+    background-color: white;
+    border-radius: 16px 0 0 16px;
+  }
+
+  &__title {
+    font-weight: 700px;
+    font-size: 48px;
+    line-height: 48px;
+    width: 399px;
+    height: 144px;
+    margin-bottom: 16px;
+  }
+
+  &__offer {
+    width: 399px;
+    height: 48px;
+  }
+
+  &__form {
+    margin-top: 48px;
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input,
+    button {
+      padding: 16px;
+      width: 399px;
+      height: 56px;
+      border: 1px solid #ebebeb;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 16px;
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &__image {
+    position: relative;
+  }
+
+  &__image img {
+    height: 536px;
+    object-fit: cover;
+    border-radius: 0 16px 16px 0;
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  &__close:hover {
+    opacity: 0.9;
+  }
+}

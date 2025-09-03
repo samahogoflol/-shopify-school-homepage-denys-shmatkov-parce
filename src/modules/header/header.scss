@@ -1,0 +1,19 @@
+.header {
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 60px 0 60px;
+  }
+  &__ul {
+    display: flex;
+    gap: 32px;
+    color: #111;
+  }
+  &__div {
+    display: flex;
+  }
+}
+
+

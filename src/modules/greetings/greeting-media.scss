@@ -1,0 +1,66 @@
+@media (max-width: 1279px) {
+  .greeting__content {
+    width: 548px;
+    top: 25vw;
+    left: 20vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .greeting .greeting__swiper .swiper-slide img {
+    position: relative;
+    height: 600px;
+    object-fit: inherit;
+  }
+  .greeting {
+    width: 100vw;
+    height: 600px;
+    text-align: center;
+
+    &__content {
+      position: absolute;
+      width: 80%;
+      text-align: center;
+      top: 158px;
+      left: 40px;
+    }
+
+    &__title {
+      text-align: center;
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .greeting {
+    &__content {
+      display: block;
+      width: 343px;
+      height: 284px;
+      position: absolute;
+      z-index: 1;
+      left: 0vw;
+      color: white;
+    }
+
+    &__title {
+      line-height: 48px;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    &__text {
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
