@@ -2,40 +2,36 @@ import Swiper from "swiper";
 import { Thumbs, FreeMode, Mousewheel, Manipulation } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
-import whiteFoto1 from "../../assets/imgs/products/whiteVersion/mainFoto.svg";
-import whiteFoto2 from "../../assets/imgs/products/whiteVersion/second.svg";
-import whiteFoto3 from "../../assets/imgs/products/whiteVersion/third.svg";
-import whiteFoto4 from "../../assets/imgs/products/whiteVersion/fourth.svg";
-import whiteFoto5 from "../../assets/imgs/products/whiteVersion/five.svg";
+import pink1 from "url:../../assets/imgs/products/pinkVersion/mainFoto.svg";
+import pink2 from "url:../../assets/imgs/products/pinkVersion/second.svg";
+import pink3 from "url:../../assets/imgs/products/pinkVersion/third.svg";
+import pink4 from "url:../../assets/imgs/products/pinkVersion/fourth.svg";
+import pink5 from "url:../../assets/imgs/products/pinkVersion/five.svg";
 
-import blackFoto1 from "../../assets/imgs/products/blackVersion/main.svg";
-import blackFoto2 from "../../assets/imgs/products/blackVersion/second.svg";
-import blackFoto3 from "../../assets/imgs/products/blackVersion/third.svg";
-import blackFoto4 from "../../assets/imgs/products/blackVersion/fourth.svg";
-import blackFoto5 from "../../assets/imgs/products/blackVersion/five.svg";
+import white1 from "url:../../assets/imgs/products/whiteVersion/mainFoto.svg";
+import white2 from "url:../../assets/imgs/products/whiteVersion/second.svg";
+import white3 from "url:../../assets/imgs/products/whiteVersion/third.svg";
+import white4 from "url:../../assets/imgs/products/whiteVersion/fourth.svg";
+import white5 from "url:../../assets/imgs/products/whiteVersion/five.svg";
 
-import pinkFoto1 from "../../assets/imgs/products/pinkVersion/mainFoto.svg";
-import pinkFoto2 from "../../assets/imgs/products/pinkVersion/second.svg";
-import pinkFoto3 from "../../assets/imgs/products/pinkVersion/third.svg";
-import pinkFoto4 from "../../assets/imgs/products/pinkVersion/fourth.svg";
-import pinkFoto5 from "../../assets/imgs/products/pinkVersion/five.svg";
+import black1 from "url:../../assets/imgs/products/blackVersion/main.svg";
+import black2 from "url:../../assets/imgs/products/blackVersion/second.svg";
+import black3 from "url:../../assets/imgs/products/blackVersion/third.svg";
+import black4 from "url:../../assets/imgs/products/blackVersion/fourth.svg";
+import black5 from "url:../../assets/imgs/products/blackVersion/five.svg";
+
+const assetUrl = (m) => (typeof m === "string" ? m : m?.default ?? String(m));
+
+console.log("pink images:", [pink1, pink2, pink3, pink4, pink5].map(assetUrl));
 
 document.addEventListener("DOMContentLoaded", () => {
   const VARIANTS = {
-    white: {
-      images: [whiteFoto1, whiteFoto2, whiteFoto3, whiteFoto4, whiteFoto5],
-      price: 320,
-    },
-    black: {
-      images: [blackFoto1, blackFoto2, blackFoto3, blackFoto4, blackFoto5],
-      price: 300,
-    },
-    pink: {
-      images: [pinkFoto1, pinkFoto2, pinkFoto3, pinkFoto4, pinkFoto5],
-      price: 280,
-    },
+    white: { images: [white1, white2, white3, white4, white5].map(assetUrl), price: 320 },
+    black: { images: [black1, black2, black3, black4, black5].map(assetUrl), price: 300 },
+    pink: { images: [pink1, pink2, pink3, pink4, pink5].map(assetUrl), price: 280 },
   };
 
+  // --- ДАЛІ ТВОЯ ЛОГІКА БЕЗ ЗМІН ---
   const priceEl = document.getElementById("product-price");
   const sizesRoot = document.querySelector(".selected-product__sizes");
   const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
@@ -80,12 +76,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const buildSlides = (swiper, images, imgClass = "") => {
-    const slides = images.map(
-      (src, i) =>
-        `<div class="swiper-slide">
-           <img class="${imgClass}" src="${src}" alt="variant image ${i + 1}">
-         </div>`
-    );
+    const slides = images.map((src, i) => {
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+      const img = document.createElement("img");
+      if (imgClass) img.className = imgClass;
+      img.alt = `variant image ${i + 1}`;
+      img.decoding = "async";
+      img.loading = "lazy";
+      img.src = src; // <-- вже чистий http-URL
+      slide.appendChild(img);
+      return slide;
+    });
     swiper.removeAllSlides();
     swiper.appendSlide(slides);
     swiper.update();
