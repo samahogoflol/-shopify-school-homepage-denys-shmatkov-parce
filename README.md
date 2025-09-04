@@ -1,10 +1,7 @@
 How to Run Locally
 To get a local copy of this project up and running, follow these simple steps. :
-1 :
-git clone https://github.com/https://github.com/samahogoflol/-shopify-school-homepage-denys-shmatkov-parce.git
-2 : 
+
 npm install
-3 : 
 npm start 
 
 Technologies Used :
