@@ -42,6 +42,11 @@
     background-color: #fff;
   }
 
+  &__button:hover {
+    background-color: black;
+    color: white;
+  }
+
   .swiper-pagination {
     gap: 8px;
   }

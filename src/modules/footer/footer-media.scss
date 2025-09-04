@@ -25,7 +25,11 @@
 
     &__arrow {
       display: block;
-      padding: 0 2vw;
+    }
+
+    &__arrow-block {
+      display: flex;
+      justify-content: space-between;
     }
 
     &__list.is-active {
@@ -46,10 +50,6 @@
     &__help,
     &__company,
     &__menu {
-      display: flex;
-      flex-direction: column;
-      width: 90vw;
-      justify-content: left;
       border-top: 1px solid #ebebeb;
     }
 
@@ -72,8 +72,8 @@
     &__company img,
     &__menu img {
       position: absolute;
-      left: 320px;
-      top: 20px;
+      right: 5vw;
+      top: 5vw;
     }
 
     &__title {

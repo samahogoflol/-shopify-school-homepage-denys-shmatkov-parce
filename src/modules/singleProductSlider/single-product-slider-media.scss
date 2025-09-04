@@ -3,7 +3,7 @@
     margin-left: 0;
   }
   .selected-product {
-    width: 100vw;
+    width: 100%;
   }
 
   .selected-product__thumbs-swiper.swiper {
@@ -11,7 +11,8 @@
   }
 
   .selected-product__main.swiper {
-    width: max-content;
+    width: 634px;
+    height: 634px;
   }
 
   .selected-product {
@@ -92,6 +93,7 @@
       .swiper.selected-product__main {
         order: 1;
         width: 100%;
+        height: auto;
       }
     }
 

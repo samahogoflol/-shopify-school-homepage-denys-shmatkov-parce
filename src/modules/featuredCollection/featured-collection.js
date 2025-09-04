@@ -4,11 +4,12 @@ import { Navigation } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const swiperFeaturedCollection = new Swiper(".products-swiper", {
+  new Swiper(".products-swiper", {
     modules: [Navigation],
     spaceBetween: 24,
     slidesPerView: 4,
     watchOverflow: false,
+    loop: true,
     navigation: {
       nextEl: ".custom-swiper-next",
       prevEl: ".custom-swiper-prev",

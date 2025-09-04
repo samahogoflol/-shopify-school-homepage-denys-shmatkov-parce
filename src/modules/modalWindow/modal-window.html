@@ -1,10 +1,11 @@
 <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-offer">
   <div class="modal__content">
     <div class="modal__action">
-      <h2 id="modal-title" class="modal__title" class="modal__title">Here’s $10 Off Your First Order!</h2>
-      <p id="modal-offer" class="modal__offer">
-        Join our newsletter and get a $10 discount code sent straight to your inbox. New customers only.
-      </p>
+      <button type="button" class="modal__close">X</button>
+      <div class="modal__title">
+        <h2 id="modal-title" class="modal__title">Here’s $10 Off Your First Order!</h2>
+        <p id="modal-offer">Join our newsletter and get a $10 discount code sent straight to your inbox. New customers only.</p>
+      </div>
       <form class="modal__form">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="Enter Email" />
@@ -12,8 +13,7 @@
       </form>
     </div>
     <div class="modal__image">
-      <button type="button" class="modal__close">X</button>
       <img src="/src/assets/imgs/modal.png" alt="10% off" />
     </div>
-  </div>  
+  </div>
 </div>

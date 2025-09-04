@@ -15,12 +15,11 @@
   }
 }
 
-.custom-swiper-prev,
-.custom-swiper-next {
-  display: none;
-}
-
 @media (max-width: 767px) {
+  .custom-swiper-prev,
+  .custom-swiper-next {
+    display: none;
+  }
   .products-swiper.swiper {
     padding-left: 16px;
   }

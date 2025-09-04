@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const thumbs = new Swiper(".selected-product__thumbs-swiper", {
     modules: [FreeMode, Mousewheel, Manipulation],
-    loop: false,
+    watchOverflow : false,
     watchSlidesProgress: true,
     direction: "vertical",
     slidesPerView: 5,
