@@ -1,35 +1,32 @@
 @media (max-width: 1279px) {
-  @media (max-width: 1279px) {
-    .products-swiper.swiper {
-      margin: 0;
-      padding: 0 0 0 5vw;
-      width: 100vw;
-    }
-    .custom-swiper-prev,
-    .custom-swiper-next {
-      display: none;
-    }
-
-    .produck-slider__title {
-      text-align: left;
-      padding-left: 37vw;
-    }
+  .products-swiper.swiper {
+    margin: 0;
+    padding: 0 0 0 5vw;
+    width: 100vw;
   }
-
   .custom-swiper-prev,
   .custom-swiper-next {
     display: none;
   }
+
+  .product-slider__title {
+    text-align: left;
+    padding-left: 37vw;
+  }
+}
+
+.custom-swiper-prev,
+.custom-swiper-next {
+  display: none;
 }
 
 @media (max-width: 767px) {
   .products-swiper.swiper {
-    margin: 0;
-    padding: 0 0 0 3vw; // перевірити
-    width: 100vw;
+    padding-left: 16px;
   }
-  .produck-slider__title {
-    text-align: left;
-    padding-left: 10vw;
+  .product-slider {
+    &__title {
+      padding-left: 8vw;
+    }
   }
 }

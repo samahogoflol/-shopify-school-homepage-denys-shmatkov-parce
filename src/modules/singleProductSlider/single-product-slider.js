@@ -30,8 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     black: { images: [black1, black2, black3, black4, black5].map(assetUrl), price: 300 },
     pink: { images: [pink1, pink2, pink3, pink4, pink5].map(assetUrl), price: 280 },
   };
-
-  // --- ДАЛІ ТВОЯ ЛОГІКА БЕЗ ЗМІН ---
+  
   const priceEl = document.getElementById("product-price");
   const sizesRoot = document.querySelector(".selected-product__sizes");
   const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
@@ -84,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       img.alt = `variant image ${i + 1}`;
       img.decoding = "async";
       img.loading = "lazy";
-      img.src = src; // <-- вже чистий http-URL
+      img.src = src; 
       slide.appendChild(img);
       return slide;
     });

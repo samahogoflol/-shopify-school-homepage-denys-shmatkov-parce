@@ -16,10 +16,12 @@
 
 @media (max-width: 767px) {
   .header {
+    width: 100%;
+    height: auto;
     &__top {
       display: flex;
       padding: 5vw;
-      gap: calc(20% + 7vw);
+      // gap: calc(20% + 7vw);
     }
 
     &__nav {
@@ -44,6 +46,7 @@
 
     &__basket {
       display: block;
+      margin-left: 75vw;
     }
 
     &__mobile-nav ul {

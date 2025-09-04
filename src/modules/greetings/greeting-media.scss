@@ -1,8 +1,11 @@
 @media (max-width: 1279px) {
-  .greeting__content {
-    width: 548px;
-    top: 25vw;
-    left: 20vw;
+  .greeting {
+    width: 100vw;
+    &__content {
+      width: 548px;
+      top: 6vw;
+      left: 16vw;
+    }
   }
 }
 
@@ -14,7 +17,6 @@
   }
   .greeting {
     width: 100vw;
-    height: 600px;
     text-align: center;
 
     &__content {
